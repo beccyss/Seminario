@@ -21,7 +21,7 @@ int main() {
   else
     printf("Os operadores possíveis para realizar os cálculos são: \n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Logaritmo\n6 - Potenciação");
   
-  printf("Digite o operador: ");
+  printf("\nDigite o operador: ");
   scanf("%d", &operador);
   
   while (operador == 0){
