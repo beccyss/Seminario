@@ -19,7 +19,7 @@ int main() {
     printf("Os operadores possíveis para realizar os cálculos são: \n1 - Soma\n2 - Subtração\n3 - Multiplicação");
     }
   else
-    printf("Os operadores possíveis para realizar os cálculos são: \n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n");
+    printf("Os operadores possíveis para realizar os cálculos são: \n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Logaritmo\n6 - Potenciação");
   
   printf("Digite o operador: ");
   scanf("%d", &operador);
@@ -53,6 +53,8 @@ int main() {
   printf("O resultado é: %.2f", res);
   
  int n = 0;
+
+  if (operador == 6) {
     int expoente = 0; // Variável para armazenar o expoente
 
     printf("Digite o número que deseja calcular a raiz: ");
@@ -63,6 +65,22 @@ int main() {
     double resultado = pow(n, 1.0 / expoente); // Use a função pow() para calcular a raiz com o expoente
 
     printf("O resultado é: %.2f\n", resultado); // Exiba o resultado
+  }
+
+  //log
+
+  double base, n1;
+
+    if (operador == 5) { printf("Insira a base do logaritmo: ");
+    scanf("%lf", &base);
+
+    printf("Insira o número: ");
+    scanf("%lf", &n1);
+                        
+    double total = log(n1) / log(base);
+
+    printf("Resultado: %.2lf\n", total);
+       }
 
 
   return 0;
