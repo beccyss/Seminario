@@ -10,7 +10,7 @@ int main() {
   int operador;
   float res;
 
-  printf("Os operadores possíveis para realizar os cálculos são: \n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Logaritmo\n6 - Potenciação");
+  printf("Os operadores possíveis para realizar os cálculos são: \n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Logaritmo\n6 - Radiciação\n7 - Potenciação");
 
   printf("\nDigite o operador: ");
   scanf("%d", &operador);
@@ -57,9 +57,9 @@ int main() {
   if (operador == 6) {
     int expoente = 0; // Variável para armazenar o expoente
 
-    printf("Digite o número que deseja calcular a raiz: ");
+    printf("\nDigite o número que deseja calcular a raiz: ");
     scanf("%d", &n);
-    printf("Digite o expoente da raiz: ");
+    printf("\nDigite o expoente da raiz: ");
     scanf("%d", &expoente); // Leia o valor do expoente
 
     double resultado = pow(n, 1.0 / expoente); // Use a função pow() para calcular a raiz com o expoente
@@ -71,16 +71,28 @@ int main() {
 
   double base, n1;
 
-    if (operador == 5) { printf("Insira a base do logaritmo: ");
-    scanf("%lf", &base);
-
+    if (operador == 5) { 
     printf("Insira o número: ");
     scanf("%lf", &n1);
 
-    double total = log(n1) / log(base);
+    double total = log(n1);
 
     printf("Resultado: %.2lf\n", total);
     }
+    
+    if (operador == 7) { 
+  int x=0, n=0, resultado=0;
+
+  printf("\nPara realizar o cálculo de potência é necessário que você insira dois valores para X e N. Onde X é a base e N o expoente.");
+  printf("\n\nValor de X:");
+  scanf("%d", &x);
+  printf("\nValor de N:");
+  scanf("%d", &n);
+
+  resultado=pow(x,n);
+
+  printf("\n\nO resultado de %d elevado a %d é: %d", x, n, resultado);
+  }
   }
 
   return 0;
