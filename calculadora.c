@@ -10,19 +10,16 @@ int main() {
   int operador;
   float res;
 
+  printf("Os operadores possíveis para realizar os cálculos são: \n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Logaritmo\n6 - Potenciação");
+
+  printf("\nDigite o operador: ");
+  scanf("%d", &operador);
+
+  if (operador <= 4){
   printf("Digite o primeiro valor: ");
   scanf("%f", &valor1);
   printf("Digite o segundo valor: ");
   scanf("%f", &valor2);
-
-  if (valor2 == 0){
-    printf("Os operadores possíveis para realizar os cálculos são: \n1 - Soma\n2 - Subtração\n3 - Multiplicação");
-    }
-  else
-    printf("Os operadores possíveis para realizar os cálculos são: \n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n5 - Logaritmo\n6 - Potenciação");
-  
-  printf("\nDigite o operador: ");
-  scanf("%d", &operador);
   
   while (operador == 0){
     printf( "Operador inválido, digite novamente: ");
@@ -36,21 +33,24 @@ int main() {
 
   if (operador == 1){
     res = valor1 + valor2;
+    printf("O resultado é: %.2f", res);
   }
 
   if (operador == 2){
     res = valor1 - valor2;
+    printf("O resultado é: %.2f", res);
   }
 
   if (operador == 3){
     res = valor1 * valor2;
+    printf("O resultado é: %.2f", res);
   }
 
   if (operador == 4){
     res = valor1 / valor2;
-  }
-
-  printf("O resultado é: %.2f", res);
+    printf("O resultado é: %.2f", res);
+  } 
+  } else {
   
  int n = 0;
 
@@ -76,12 +76,12 @@ int main() {
 
     printf("Insira o número: ");
     scanf("%lf", &n1);
-                        
+
     double total = log(n1) / log(base);
 
     printf("Resultado: %.2lf\n", total);
-       }
-
+    }
+  }
 
   return 0;
 }
